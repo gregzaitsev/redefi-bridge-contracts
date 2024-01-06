@@ -1,0 +1,44 @@
+{
+  "name": "redefi-bridge-contracts",
+  "version": "1.0.0",
+  "description": "ReDeFi Ethereum to L1 Bridge Contracts",
+  "main": "",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "@openzeppelin/contracts": "4.6.0",
+    "@truffle/hdwallet-provider": "2.0.9",
+    "bignumber.js": "^9.0.0",
+    "non-fungible-token-abi": "1.0.1",
+    "web3": "1.9.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/index.ts",
+    "dev": "tsc && ts-node src/index.ts",
+    "test": "rm -frd ./build && truffle compile && truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:gregzaitsev/redefi-bridge-contracts.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "homepage": "https://redefi.world",
+  "dependencies": {
+    "ethers": "6.3.0"
+  },
+  "standard": {
+    "globals": [
+      "it",
+      "assert",
+      "beforeEach",
+      "afterEach",
+      "describe",
+      "contract",
+      "artifacts",
+      "web3"
+    ]
+  }
+}
