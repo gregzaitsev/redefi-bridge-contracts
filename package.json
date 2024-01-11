@@ -7,17 +7,32 @@
     "test": "test"
   },
   "devDependencies": {
+		"@nomiclabs/hardhat-ethers": "^2.0.2",
+		"@nomiclabs/hardhat-etherscan": "^2.1.8",
+		"@nomiclabs/hardhat-waffle": "^2.0.1",
     "@openzeppelin/contracts": "4.6.0",
     "@truffle/hdwallet-provider": "2.0.9",
     "bignumber.js": "^9.0.0",
     "non-fungible-token-abi": "1.0.1",
-    "web3": "1.9.0"
+		"ethereum-waffle": "^3.4.0",
+		"ethers": "^5.4.5",
+		"hardhat": "^2.6.2",
+		"hardhat-deploy": "^0.9.3"
   },
   "scripts": {
-    "build": "tsc",
-    "start": "ts-node src/index.ts",
-    "dev": "tsc && ts-node src/index.ts",
-    "test": "rm -frd ./build && truffle compile && truffle test"
+		"compile": "npx hardhat compile",
+		"test": "npx hardhat test",
+		"local": "npx hardhat run --network localhost scripts/deploy-eth.js",
+		"redefi": "npx hardhat run --network redefi scripts/deploy.js",
+		"tredefi": "npx hardhat run --network tredefi scripts/deploy.js",
+		"eth": "npx hardhat run --network eth scripts/deploy-eth.js",
+		"teth": "npx hardhat run --network teth scripts/deploy-eth.js",
+		"bnb": "npx hardhat run --network bnb scripts/deploy-bnb.js",
+		"tbnb": "npx hardhat run --network tbnb scripts/deploy-bnb.js",
+		"avax": "npx hardhat run --network avax scripts/deploy-avax.js",
+		"tavax": "npx hardhat run --network tavax scripts/deploy-avax.js",
+		"matic": "npx hardhat run --network matic scripts/deploy-matic.js",
+		"tmatic": "npx hardhat run --network tmatic scripts/deploy-matic.js"
   },
   "repository": {
     "type": "git",
